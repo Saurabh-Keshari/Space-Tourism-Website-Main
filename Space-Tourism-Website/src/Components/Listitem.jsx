@@ -1,16 +1,16 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Bar from "./Bar";
 
-export default function Listitem({to, num, route, handleBar}) {
+export default function Listitem({to, num, route}) {
   return (
     <>
-      <li className="uppercase flex justify-between" onClick={handleBar}>
-        <Link
+      <li className="uppercase flex justify-between">
+        <NavLink
           to={to}
-          className="text-white items-center"
+          className={({ isActive }) => isActive ? "active" : ""}
         >
           <span className="font-bold mr-2">0{num}</span> {route}
-        </Link>
+        </NavLink>
         <Bar />
       </li>
     </>
