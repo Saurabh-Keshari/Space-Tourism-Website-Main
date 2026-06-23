@@ -6,13 +6,13 @@ export default function Home() {
       <section className="home px-5 flex justify-center">
         <div className="overlay">
           <article className="lg:max-w-150">
-            <h1 className="text-xl text-gray-400 uppercase">
+            <h1 className="blueText text-xl uppercase">
               So, you want to travel to{" "}
               <span className="block text-[75px] font-normal text-white mb-5">
                 SPACE
               </span>
             </h1>
-            <p className="text-gray-400">
+            <p className="blueText">
               Let's face it; if you want to go to space, you might as well
               genuinely go to outer space and not hover kind of on the edge of
               it. Well sit back, and relax because we'll give you a truly out of
