@@ -88,7 +88,9 @@ p {
   background: url("../starter-code/assets/home/background-home-mobile.jpg")
     no-repeat center/cover;
   min-height: 100vh;
-  padding-block: 110px 50px;
+  padding-top: 110px;
+  display: flex;
+  justify-content: center;
 }
 
 .home .overlay {
@@ -96,7 +98,7 @@ p {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding-bottom: 144px;
+  padding-top: 20px;
   max-width: 500px;
 }
 
@@ -108,6 +110,9 @@ p {
   background: url("../starter-code/assets/destination/background-destination-mobile.jpg") no-repeat center/cover;
 }
 
+.crew {
+  background: url("../starter-code/assets/crew/background-crew-mobile.jpg") no-repeat center/cover;
+}
 
 @media (min-width: 768px) {
   .header {
@@ -163,12 +168,8 @@ p {
   }
 
   .home .overlay {
-    padding-top: 70px;
+    padding-top: 50px;
     max-width: 648px;
-  }
-
-  .home .overlay article > h1 > span {
-    font-size: 120px;
   }
 
   .home .overlay .explore-btn {
@@ -178,28 +179,31 @@ p {
 
   .destination {
     background: url("../starter-code/assets/destination/background-destination-tablet.jpg") no-repeat center/cover;
+    min-height: 100vh;
   }
 
-  .destination h1 {
-    justify-self: flex-start;
-  }
-
-  .destination .card article>img {
+  .destination .overlay article>img {
     height: 300px;
   }
 
-  .destination .card article>button {
+  .destination .overlay article>button {
     margin-inline: 16px;
   }
 
-  .destination .card article>h2 {
+  .destination .overlay article>h2 {
     font-size: 80px;
   }
 
-  .destination .card article>ul {
+  .destination .overlay article>ul {
     display: flex;
     justify-content: space-around;
   }
+
+  
+.crew {
+  background: url("../starter-code/assets/crew/background-crew-tablet.jpg") no-repeat center/cover;
+  min-height: 100vh;
+}
 
 }
 
@@ -214,7 +218,7 @@ p {
     min-width: 650px;
   }
 
-  .header .navbar ul > li > a:hover {
+  .borderHover:hover {
     border-bottom: 4px solid rgb(162, 167, 177);
   }
 
@@ -227,12 +231,12 @@ p {
 
   .home .overlay {
     flex-direction: row;
-    align-items: start;
+    align-items: end;
     text-align: start;
     justify-content: space-around;
     width: 100%;
     max-width: 100vw;
-    padding-bottom: 50px;
+    padding-block: 120px 30px;
     min-height: auto;
   }
 
@@ -249,30 +253,26 @@ p {
     align-items: center;
   }
 
-  .destination .card {
-    display: flex;
-    align-items: end;
-    justify-content: space-between;
-    width: 100%;
-    padding-left: 50px;
-    gap: 150px;
+  .destination .overlay {
+    padding-top: 50px;
   }
   
-  .destination .card article {
-    text-align: start;
-    margin: 0;
-  }
   
-  .destination .card article>img {
+  .destination .overlay article>img {
     height: 400px;
   }
   
-  .destination .card article>button {
+  .destination .overlay article>button {
     margin-inline: 0 32px;
   }
 
-  .destination .card article>ul {
+  .destination .overlay article>ul {
     justify-content: start;
     gap: 70px;
   }
+
+  
+.crew {
+  background: url("../starter-code/assets/crew/background-crew-desktop.jpg") no-repeat center/cover;
+}
 }

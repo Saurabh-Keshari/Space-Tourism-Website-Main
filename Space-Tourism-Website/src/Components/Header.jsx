@@ -14,7 +14,7 @@ export default function Header() {
   return (
     <>
       <header className="header">
-        <div className="logo">
+        <div className="logo cursor-pointer">
           <Link to="/">
             <img src={Logo} alt="Space Tourism" title="Space Tourism" />
           </Link>

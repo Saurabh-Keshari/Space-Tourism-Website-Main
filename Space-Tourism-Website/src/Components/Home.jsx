@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 export default function Home() {
   return (
     <>
-      <section className="home px-5 flex justify-center">
-        <div className="overlay">
+      <section className="home px-5">
+        <div className="overlay pb-[144px]">
           <article className="lg:max-w-150">
             <h1 className="blueText text-xl uppercase">
               So, you want to travel to{" "}
-              <span className="block text-[75px] font-normal text-white mb-5">
+              <span className="block text-[75px] md:text-[120px] font-normal text-white mb-5">
                 SPACE
               </span>
             </h1>

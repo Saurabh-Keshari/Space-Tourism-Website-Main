@@ -9,49 +9,46 @@ export default function Destination() {
   return (
     <>
       <section className="home destination text-white px-5 text-center">
-        <div className="flex flex-col lg:items-start">
-          <h1 className="mb-14 text-xl uppercase">
-            <span className="opacity-25 mx-3 font-bold tracking-[15%]">01</span>{" "}
-            Pick your destination
-          </h1>
-          <div className="card">
-            <article>
-              <img
-                src={images.png}
-                alt={name}
-                title={name}
-                className="block mx-auto h-[200px] mb-14"
-              />
-            </article>
-            <article className="max-w-100 mx-auto">
-              {planets.map((item, index) => (
-                <button
-                  key={index}
-                  onClick={() => {
-                    setValue(index);
-                  }}
-                  className={`blueText uppercase text-xl pb-2 mx-3 ${index === value && "border-b-3 border-white"}`}
-                >
-                  {item.name}
-                </button>
-              ))}
+        <div className="overlay pb-[30px]">
+          <article>
+            <h1 className="mb-14 md:text-xl lg:text-3xl lg:mb-37 uppercase">
+              <span className="opacity-25 mr-3 font-bold tracking-[15%]">
+                01
+              </span>{" "}
+              Pick your destination
+            </h1>
+            <img
+              src={images.png}
+              alt={name}
+              title={name}
+              className="h-[200px] mb-14 lg:mb-0 lg:ml-10"
+            />
+          </article>
+          <article className="lg:max-w-97">
+            {planets.map((item, index) => (
+              <button
+                key={index}
+                onClick={() => {
+                  setValue(index);
+                }}
+                className={`borderHover uppercase text-xl pb-2 mx-3 ${index === value && "text-white border-b-3 border-white"} text-[rgb(208, 214, 249)]`}
+              >
+                {item.name}
+              </button>
+            ))}
 
-              <h2 className="uppercase text-6xl mt-8 mb-6">{name}</h2>
-              <p className="blueText text-xl border-b pb-6 mb-6">
-                {description}
-              </p>
-              <ul className="lg:items-start">
-                <li className="blueText text-lg uppercase">
-                  avg. distance{" "}
-                  <p className="text-white text-3xl mb-6">{distance}</p>
-                </li>
-                <li className="blueText text-lg uppercase">
-                  est. travel time{" "}
-                  <p className="text-white text-3xl">{travel}</p>
-                </li>
-              </ul>
-            </article>
-          </div>
+            <h2 className="uppercase text-6xl mt-8 mb-6">{name}</h2>
+            <p className="blueText lg;text-lg border-b pb-6 mb-6">{description}</p>
+            <ul>
+              <li className="blueText text-sm uppercase mb-6 lg:mb-0">
+                avg. distance{" "}
+                <p className="text-white text-3xl">{distance}</p>
+              </li>
+              <li className="blueText text-sm uppercase">
+                est. travel time <p className="text-white text-3xl">{travel}</p>
+              </li>
+            </ul>
+          </article>
         </div>
       </section>
     </>
