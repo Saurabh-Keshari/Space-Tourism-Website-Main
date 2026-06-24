@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <>
       <section className="home px-5">
-        <div className="overlay pb-[144px]">
+        <div className="overlay pb-[144px] md:pt-[50px]">
           <article className="lg:max-w-150">
             <h1 className="blueText text-xl uppercase">
               So, you want to travel to{" "}

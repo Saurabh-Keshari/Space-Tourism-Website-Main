@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { destinations } from "../../starter-code/data.json";
-// import Image from "../../starter-code/assets/destination/image-moon.png"
 
 export default function Destination() {
   const [planets] = useState(destinations);
@@ -11,7 +10,7 @@ export default function Destination() {
       <section className="home destination text-white px-5 text-center">
         <div className="overlay pb-[30px]">
           <article>
-            <h1 className="mb-14 md:text-xl lg:text-3xl lg:mb-37 uppercase">
+            <h1 className="mb-14 md:text-xl md:text-left lg:text-3xl lg:mb-37 uppercase">
               <span className="opacity-25 mr-3 font-bold tracking-[15%]">
                 01
               </span>{" "}
@@ -21,7 +20,7 @@ export default function Destination() {
               src={images.png}
               alt={name}
               title={name}
-              className="h-[200px] mb-14 lg:mb-0 lg:ml-10"
+              className="h-[200px] block mx-auto mb-14 md:h-[300px] lg:h-[400px] lg:mb-0 lg:ml-10"
             />
           </article>
           <article className="lg:max-w-97">
@@ -31,13 +30,13 @@ export default function Destination() {
                 onClick={() => {
                   setValue(index);
                 }}
-                className={`borderHover uppercase text-xl pb-2 mx-3 ${index === value && "text-white border-b-3 border-white"} text-[rgb(208, 214, 249)]`}
+                className={`borderHover uppercase text-xl pb-2 mx-3 ${index === value && "text-white border-b-4 border-white"} text-[#d0d6f9]`}
               >
                 {item.name}
               </button>
             ))}
 
-            <h2 className="uppercase text-6xl mt-8 mb-6">{name}</h2>
+            <h2 className="uppercase text-6xl md:text-7xl mt-8 mb-6">{name}</h2>
             <p className="blueText lg;text-lg border-b pb-6 mb-6">{description}</p>
             <ul>
               <li className="blueText text-sm uppercase mb-6 lg:mb-0">
