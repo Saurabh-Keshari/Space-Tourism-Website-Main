@@ -19,11 +19,11 @@ export default function Destination() {
                 src={images.portrait}
                 alt={name}
                 title={name}
-                className="w-[100vw] h-150 md:h-150 object-cover block mb-14 lg:h-[400px] lg:mb-0"
+                className="w-[100vw] object-cover block mb-14 lg:mb-0"
               />
             </article>
             <article className="lg:max-w-145 px-8 gap-16">
-              <div className="mb-12">
+              <div className="mb-12 lg:mb-0">
                 {tech.map((item, index) => (
                   <button
                     key={index}
@@ -43,7 +43,7 @@ export default function Destination() {
                   </span>
                   {name}
                 </h2>
-                <p className="blueText max-w-140 mx-auto lg;text-lg mb-12">
+                <p className="blueText max-w-140 mx-auto lg;text-lg mb-12 lg:mb-0">
                   {description}
                 </p>
               </div>
