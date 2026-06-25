@@ -1,8 +1,5 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import Logo from "../../public/assets/shared/logo.svg";
-import Menu from "../../public/assets/shared/icon-hamburger.svg";
-import Cross from "../../public/assets/shared/icon-close.svg";
 import Listitem from "./Listitem";
 
 export default function Header() {
@@ -20,13 +17,13 @@ export default function Header() {
       <header className="header">
         <div className="logo cursor-pointer">
           <Link to="/">
-            <img src={Logo} alt="Space Tourism" title="Space Tourism" />
+            <img src="/assets/shared/logo.svg" alt="Space Tourism" title="Space Tourism" />
           </Link>
         </div>
 
         <nav className={`navbar ${isNavOpen ? "open":""}`}>
           <button onClick={toggleNav} className="cross-btn">
-            <img src={Cross} alt="Cross Bar" />
+            <img src="/assets/shared/icon-close.svg" alt="Cross Bar" />
           </button>
           <ul>
             <Listitem to="/" num={0} route="home" onClick={closeNav}/>
@@ -47,7 +44,7 @@ export default function Header() {
         </nav>
         <div className="hamburger">
           <button onClick={toggleNav}>
-            <img src={Menu} alt="Menu Bar" />
+            <img src="/assets/shared/icon-hamburger.svg" alt="Menu Bar" />
           </button>
         </div>
       </header>

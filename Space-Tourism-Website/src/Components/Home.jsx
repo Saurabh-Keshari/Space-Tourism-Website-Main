@@ -22,7 +22,7 @@ export default function Home() {
           <article className="mt-20 w-40 h-40 md:h-48 md:w-48 lg:w-55 lg:h-55">
             <Link
               to="/destination"
-              className="explore-btn flex items-center justify-center w-48 h-48 rounded-full bg-white text-gray-800 uppercase text-4xl transition-all duration-200 ease-in-out"
+              className="explore-btn flex items-center justify-center w-48 h-48 rounded-full bg-white text-gray-800 uppercase text-3xl md:text-4xl transition-all duration-200 ease-in-out"
             >
               Explore
             </Link>

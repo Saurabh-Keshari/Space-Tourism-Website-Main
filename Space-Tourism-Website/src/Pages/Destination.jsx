@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { destinations } from "../../public/data.json";
+import { destinations } from "../data.json";
 
 export default function Destination() {
   const [planets] = useState(destinations);
