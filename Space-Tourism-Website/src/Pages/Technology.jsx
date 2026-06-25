@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { technology } from "../../starter-code/data.json";
+import { technology } from "../../public/data.json";
 
 export default function Technology() {
   const [tech] = useState(technology);

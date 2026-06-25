@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import Logo from "../../starter-code/assets/shared/logo.svg";
-import Menu from "../../starter-code/assets/shared/icon-hamburger.svg";
-import Cross from "../../starter-code/assets/shared/icon-close.svg";
+import Logo from "../../public/assets/shared/logo.svg";
+import Menu from "../../public/assets/shared/icon-hamburger.svg";
+import Cross from "../../public/assets/shared/icon-close.svg";
 import Listitem from "./Listitem";
 
 export default function Header() {

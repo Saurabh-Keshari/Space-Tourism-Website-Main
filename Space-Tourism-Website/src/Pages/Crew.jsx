@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { crew } from "../../starter-code/data.json";
+import { crew } from "../../public/data.json";
 
 export default function Crew() {
   const [astronaut] = useState(crew);
