@@ -6,10 +6,14 @@ import Cross from "../../starter-code/assets/shared/icon-close.svg";
 import Listitem from "./Listitem";
 
 export default function Header() {
-  const handleClick = () => {
-    const navbar = document.querySelector(".navbar");
-    navbar.classList.toggle("open");
-  };
+  const [isNavOpen, setIsNavOpen] = useState(false);
+  const toggleNav = ()=> {
+    setIsNavOpen(!isNavOpen)
+  }
+
+  const closeNav = () => {
+    setIsNavOpen(false)
+  }
 
   return (
     <>
@@ -20,27 +24,29 @@ export default function Header() {
           </Link>
         </div>
 
-        <nav className="navbar">
-          <button className="cross-btn" onClick={handleClick}>
+        <nav className={`navbar ${isNavOpen ? "open":""}`}>
+          <button onClick={toggleNav} className="cross-btn">
             <img src={Cross} alt="Cross Bar" />
           </button>
           <ul>
-            <Listitem to="/" num={0} route="home" />
+            <Listitem to="/" num={0} route="home" onClick={closeNav}/>
             <Listitem
               to="/destination"
               num={1}
               route="destination"
+              onClick={closeNav}
             />
-            <Listitem to="/crew" num={2} route="crew" />
+            <Listitem to="/crew" num={2} route="crew" onClick={closeNav} />
             <Listitem
               to="/technology"
               num={3}
               route="technology"
+              onClick={closeNav}
             />
           </ul>
         </nav>
         <div className="hamburger">
-          <button onClick={handleClick}>
+          <button onClick={toggleNav}>
             <img src={Menu} alt="Menu Bar" />
           </button>
         </div>

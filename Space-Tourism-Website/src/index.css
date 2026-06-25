@@ -21,7 +21,6 @@ a {
   width: 100%;
   text-align: center;
   align-items: center;
-  color: inherit;
 }
 
 p {
@@ -132,7 +131,7 @@ p {
   height: 60px;
   width: 60px;
   border-radius: 100%;
-  border: 2px solid rgba(255, 255, 255, 0.5);
+  /* border: 2px solid rgba(255, 255, 255, 0.5); */
 }
 
 @media (min-width: 768px) {
@@ -190,11 +189,6 @@ p {
 
   .home .overlay {
     max-width: 648px;
-  }
-
-  .home .overlay .explore-btn {
-    height: 250px;
-    width: 250px;
   }
 
   .destination {
@@ -313,10 +307,6 @@ p {
     margin: 0;
   }
 
-  .crew .overlay article>button:hover {
-    opacity: 50%;
-  }
-
   .technology {
      background: url("../starter-code/assets/technology/background-technology-desktop.jpg")
       no-repeat center/cover;
@@ -342,7 +332,6 @@ p {
     max-height: 600px;
     flex-grow: 1;
     justify-self: end;
-    object-fit: fill;
   }
 
   .technology .overlay .tech article {

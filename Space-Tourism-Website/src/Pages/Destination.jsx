@@ -25,19 +25,33 @@ export default function Destination() {
           </article>
           <article className="lg:max-w-97">
             {planets.map((item, index) => (
+              // <button
+              //   key={index}
+              //   onClick={() => {
+              //     setValue(index);
+              //   }}
+              //   className={`borderHover uppercase text-xl pb-2 mx-3 ${index === value && "text-white border-b-4 border-white"} text-[#d0d6f9]`}
+              // >
+              //   {item.name}
+              // </button>
+
               <button
                 key={index}
                 onClick={() => {
                   setValue(index);
                 }}
-                className={`borderHover uppercase text-xl pb-2 mx-3 ${index === value && "text-white border-b-4 border-white"} text-[#d0d6f9]`}
+                className={`uppercase text-xl pb-2 mx-3 cursor-pointer border-b-4 transition-colors duration-200 ${
+                  index === value
+                    ? "text-white border-white"
+                    : "text-[#d0d6f9] border-transparent hover:border-white/50 hover:text-white"
+                }`}
               >
                 {item.name}
               </button>
             ))}
 
             <h2 className="uppercase text-6xl md:text-7xl mt-8 mb-6">{name}</h2>
-            <p className="blueText lg;text-lg border-b pb-6 mb-6">{description}</p>
+            <p className="blueText lg:text-lg border-b pb-6 mb-6">{description}</p>
             <ul>
               <li className="blueText text-sm uppercase mb-6 lg:mb-0">
                 avg. distance{" "}

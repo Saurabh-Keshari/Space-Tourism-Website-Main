@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { crew } from "../../starter-code/data.json";
 
-export default function Destination() {
+export default function Crew() {
   const [astronaut] = useState(crew);
   const [value, setValue] = useState(0);
   const { name, images, role, bio } = astronaut[value];
@@ -23,14 +23,14 @@ export default function Destination() {
               </span>
               {name}
             </h2>
-            <p className="blueText lg;text-lg  pb-6 lg:mb-50">{bio}</p>
+            <p className="blueText lg:text-lg  pb-6 lg:mb-50">{bio}</p>
             {crew.map((item, index) => (
               <button
                 key={index}
                 onClick={() => {
                   setValue(index);
                 }}
-                className={`h-3 w-3 rounded-full bg-white opacity-18 mx-3 ${index === value && "opacity-100"}`}
+                className={`h-3 w-3 rounded-full bg-white mx-3 cursor-pointer ${index === value ? "opacity-100" : " opacity-20 hover:opacity-50"}`}
               ></button>
             ))}
           </article>
